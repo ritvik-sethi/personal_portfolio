@@ -8,5 +8,5 @@ export const site = {
     goodreads: "https://www.goodreads.com/user/show/200456365-ritvik-sethi",
   },
   resumePath: "/resume.pdf",
-  resumeDownloadName: "Ritvik_Sethi_Web_Engineer_Resume.pdf",
+  resumeDownloadName: "RitvikSethi_Resume.pdf",
 } as const;
