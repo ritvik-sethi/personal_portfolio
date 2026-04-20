@@ -22,7 +22,11 @@ export function Reveal({ children, delay = 0, ...props }: RevealProps) {
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
+      viewport={{
+        once: true,
+        amount: 0.2,
+        margin: "0px 0px -64px 0px",
+      }}
       variants={{
         hidden: defaultVariants.hidden,
         visible: {
