@@ -2,6 +2,7 @@
 
 import { useCallback, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
 import { experience } from "@/lib/content";
 import { SectionHeading } from "@/components/sections/SectionHeading";
 
@@ -172,31 +173,47 @@ export function Experience() {
               </div>
               <div className="min-w-0">
                 <SpotlightCard>
-                  <h3 className="text-[17px] font-semibold leading-snug tracking-tight text-lightest-slate transition-colors duration-200 group-hover/card:text-green md:text-lg">
-                    {hasLink ? (
-                      <a
-                        href={url}
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        className="inline-flex flex-wrap items-center gap-x-1.5 gap-y-0.5 outline-none hover:text-green focus-visible:text-green focus-visible:ring-2 focus-visible:ring-green/40"
-                      >
-                        <span>{job.role}</span>
-                        <span className="text-light-slate group-hover/card:text-green/90">
-                          ·
+                  <div className="flex items-start gap-4">
+                    <div className="relative mt-0.5 h-12 w-12 shrink-0 overflow-hidden rounded-md bg-navy/0 md:h-14 md:w-14">
+                      <Image
+                        src={job.logo}
+                        alt={`${job.company} logo`}
+                        fill
+                        sizes="56px"
+                        className="object-contain object-center"
+                      />
+                    </div>
+
+                    <h3 className="min-w-0 text-[17px] font-semibold leading-snug tracking-tight text-lightest-slate transition-colors duration-200 group-hover/card:text-green md:text-lg">
+                      {hasLink ? (
+                        <a
+                          href={url}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                        className="inline-flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5 outline-none hover:text-green focus-visible:text-green focus-visible:ring-2 focus-visible:ring-green/40"
+                        >
+                          <span>{job.role}</span>
+                        <span className="inline-flex items-baseline gap-1 whitespace-nowrap">
+                          <span className="hidden text-light-slate group-hover/card:text-green/90 md:inline">
+                            ·
+                          </span>
+                          <span className="inline-flex items-center gap-1 whitespace-normal">
+                            {job.company}
+                            <ExternalArrow className="inline h-4 w-4 shrink-0 translate-x-0 translate-y-0.5 transition-transform duration-200 group-hover/card:-translate-y-px group-hover/card:translate-x-px" />
+                          </span>
                         </span>
-                        <span className="inline-flex items-center gap-1">
-                          {job.company}
-                          <ExternalArrow className="inline h-4 w-4 shrink-0 translate-x-0 translate-y-0.5 transition-transform duration-200 group-hover/card:-translate-y-px group-hover/card:translate-x-px" />
+                        </a>
+                      ) : (
+                        <span className="inline-flex flex-wrap items-center gap-x-1.5">
+                          <span>{job.role}</span>
+                        <span className="inline-flex items-baseline gap-1 whitespace-nowrap">
+                          <span className="hidden text-light-slate md:inline">·</span>
+                          <span className="whitespace-normal">{job.company}</span>
                         </span>
-                      </a>
-                    ) : (
-                      <span className="inline-flex flex-wrap items-center gap-x-1.5">
-                        <span>{job.role}</span>
-                        <span className="text-light-slate">·</span>
-                        <span>{job.company}</span>
-                      </span>
-                    )}
-                  </h3>
+                        </span>
+                      )}
+                    </h3>
+                  </div>
                   <div className="mt-4 space-y-3 text-[15px] leading-relaxed text-slate md:text-[15px]">
                     {job.bullets.map((b) => (
                       <p key={b}>{b}</p>

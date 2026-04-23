@@ -91,8 +91,9 @@ export const experience = [
   {
     dateRange: "March'25 — March'26",
     role: "Software Developer (Manager 1 level)",
-    company: "Times Internet (TOI, ET Markets, TimesHealth, ET AI Bytz)",
+    company: "Times Internet (Products: TOI, ET Markets, TimesHealth, ET AI Bytz)",
     companyUrl: "https://timesinternet.in/",
+    logo: "/logo-times.png",
     bullets: [
       "Optimized High-Traffic Platforms: Engineered overlay widgets (e.g., LIVE election widgets) for Times of India (8M+ daily users), ensuring seamless rendering and stability during peak traffic.",
       "Accelerated Cross-Platform Development: Built Economic Times Plan Page with reusable components integrated across Android/iOS webviews, reducing development effort and improving performance.",
@@ -119,6 +120,7 @@ export const experience = [
     role: "Senior Software Engineer",
     company: "Magic EdTech (Client: Pearson, Product: Pace)",
     companyUrl: "https://www.magicedtech.com/",
+    logo: "/logo-magic-edtech.png",
     bullets: [
       "Optimized Code and Performance: Revamped core algorithms using specialized data structures and react-virtualization, restructured code architecture, and eliminated 90% of redundancies and code smells.",
       "Accelerated Data Processing: Reduced processing time for an auto expanding search and highlight feature by 50%, significantly boosting system responsiveness and reducing page load time by 60%.",
@@ -145,6 +147,7 @@ export const experience = [
     role: "Associate Software Engineer",
     company: "Magic EdTech (Client: Pearson, Product: Pace)",
     companyUrl: "https://www.magicedtech.com/",
+    logo: "/logo-magic-edtech.png",
     bullets: [
       "Developed a large-scale React + TypeScript application featuring a custom rich text editor and content-reporting tools for enterprise content workflows.",
       "Boosted Test Coverage: Increased test coverage to 85% for 5 critical modules using React Testing Library and Jest/Enzyme, reducing defects by 20% and enhancing overall code reliability.",
@@ -166,6 +169,7 @@ export const experience = [
     dateRange: "June'20 — August'20",
     role: "Software Engineer Intern",
     company: "BuziBrAIns",
+    logo: "/logo-busibrains.png",
     bullets: [
       "Solely developed a management software for event photography and videography businesses, awarded best intern and a ₹25,000 prize for exemplary performance.",
     ],
