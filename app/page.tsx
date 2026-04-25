@@ -1,5 +1,6 @@
 import { OpeningAnimation } from "@/components/OpeningAnimation";
 import { HeaderNav } from "@/components/layout/HeaderNav";
+import { Footer } from "@/components/layout/Footer";
 import { SideEmail } from "@/components/layout/SideEmail";
 import { SideSocial } from "@/components/layout/SideSocial";
 import { About } from "@/components/sections/About";
@@ -33,6 +34,7 @@ export default function Home() {
         <Projects />
         <Contact />
       </main>
+      <Footer />
     </div>
   );
 }
